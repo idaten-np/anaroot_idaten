@@ -1,0 +1,12 @@
+[idatendaq@d07 anaroot]$ pwd
+/home/idatendaq/opt/anaroot
+/home/idatendaq/repos/anaroot
+[idatendaq@d07 anaroot]$ ll
+total 40
+drwxr-xr-x 2 idatendaq idatendaq 12288 Jun 26 04:55 include
+drwxr-xr-x 2 idatendaq idatendaq 12288 Jun 13 02:14 include_backup
+drwxrwxr-x 2 idatendaq idatendaq  4096 Jun 26 05:51 lib
+drwxrwxr-x 2 idatendaq idatendaq  4096 Jun  4 10:58 lib_backup
+drwxr-xr-x 2 idatendaq idatendaq   197 Jul  1 11:04 scripts
+drwxr-xr-x 2 idatendaq idatendaq   197 Jun 25 21:27 scripts_backup
+[idatendaq@d07 anaroot]$

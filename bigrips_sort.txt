@@ -1,0 +1,28 @@
+[idatendaq@d07 bigrips_sort]$ pwd
+/home/idatendaq/work/bigrips_sort
+[idatendaq@d07 bigrips_sort]$ ll
+total 68
+-rw-rw-r-- 1 idatendaq idatendaq    0 Jun 18 23:25 #specific.cc#
+-rw-rw-r-- 1 idatendaq idatendaq  749 Jun 24 15:23 CMakeLists.txt
+-rw-rw-r-- 1 idatendaq idatendaq 7009 Jun 18 16:34 \
+drwxrwxr-x 4 idatendaq idatendaq  157 Jun 25 22:35 build
+-rw-rw-r-- 1 idatendaq idatendaq 7646 Jun 23 21:26 chain.cc
+-rw-rw-r-- 1 idatendaq idatendaq 3948 Jun 21 05:49 chain.cc~
+-rw-rw-r-- 1 idatendaq idatendaq  388 Jun 19 12:46 countgate.cc
+drwxrwxr-x 7 idatendaq idatendaq  205 Jun 21 16:06 db
+-rw-rw-r-- 1 idatendaq idatendaq  972 Jun 20 15:39 findFile.cc
+drwxrwxr-x 2 idatendaq idatendaq   56 Jul  1 11:15 include
+drwxrwxr-x 5 idatendaq idatendaq   43 Jun  5 16:43 install
+drwxrwxr-x 2 idatendaq idatendaq  130 Jun 25 13:42 logs
+drwxrwxr-x 2 idatendaq idatendaq 4096 Jun  5 16:41 matrix
+-rw-r--r-- 1 idatendaq idatendaq  218 Jun 24 15:11 output.root
+-rw-rw-r-- 1 idatendaq idatendaq 1677 Jun 21 05:00 period2.cc~
+-rw-rw-r-- 1 idatendaq idatendaq 2448 Jun 21 03:00 period3.cc
+-rw-rw-r-- 1 idatendaq idatendaq  571 Jun 19 10:23 pidtext.cc
+drwxrwxr-x 2 idatendaq idatendaq 4096 Jun 27 06:17 plots
+lrwxrwxrwx 1 idatendaq idatendaq   21 Jun 24 15:19 ridf -> /raid/r0901/idaten24/
+lrwxrwxrwx 1 idatendaq idatendaq   30 Jun 24 15:20 rootfiles -> /raid/r0901/idaten24/rootfiles
+-rwxrw-r-- 1 idatendaq idatendaq 1517 Jun 26 23:25 run.py
+-rwxrw-r-- 1 idatendaq idatendaq 1544 Jun 26 00:05 run.py~
+-rw-rw-r-- 1 idatendaq idatendaq   37 Jun 25 13:29 sort_bigrips.sh
+drwxrwxr-x 2 idatendaq idatendaq  101 Jul  1 11:17 src

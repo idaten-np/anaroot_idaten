@@ -17,3 +17,10 @@ set(ANAROOT_DIR $ENV{TARTSYS} CACHE PATH "anaroot install dir")
 set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install CACHE PATH "install dir" FORCE)
 
 add_subdirectory(src)
+
+install(FILES
+	afterproc_LJ.sh
+	setup_BRSvme.sh
+	DESTINATION .)
+
+install(DIRECTORY db matrix DESTINATION .)

@@ -1,5 +1,5 @@
-ROOT_GENERATE_DICTIONARY(G__TreeData ${CMAKE_SOURCE_DIR}/include/BigRIPSTreeData.hpp LINKDEF ${CMAKE_SOURCE_DIR}/include/LinkDefUser.hpp)
 set(lib_name BigRIPSSortLib)
+ROOT_GENERATE_DICTIONARY(G__TreeData ${CMAKE_SOURCE_DIR}/include/BigRIPSTreeData.hpp LINKDEF ${CMAKE_SOURCE_DIR}/include/LinkDefUser.hpp MODULE ${lib_name})
 add_library(${lib_name} SHARED
     G__TreeData.cxx
 )
@@ -7,7 +7,12 @@ add_library(${lib_name} SHARED
 target_link_libraries(${lib_name} ${ROOT_LIBRARIES})
 
 install(TARGETS ${lib_name} DESTINATION lib)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libTreeData_rdict.pcm DESTINATION lib)
+install(FILES
+	${CMAKE_CURRENT_BINARY_DIR}/libBigRIPSSortLib_rdict.pcm
+	${CMAKE_CURRENT_BINARY_DIR}/libBigRIPSSortLib.rootmap
+	#${CMAKE_CURRENT_BINARY_DIR}/libTreeData_rdict.pcm
+	#${CMAKE_CURRENT_BINARY_DIR}/libTreeData.rootmap
+	DESTINATION lib)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../include/ DESTINATION include)
 
 function(addExec exec_name)
@@ -30,7 +35,7 @@ install(TARGETS ${exec_name}
 )
 endfunction()
 
-addExec(MakeFullBigRIPSTree)
+#addExec(MakeFullBigRIPSTree)
 addExec(MakePIDTree)
-addExec(Monitor)
+#addExec(Monitor)
 

@@ -200,7 +200,7 @@ int main(int argc, char **argv)
 	  //	  std::cout<<"EFN:68(F11 MPV), "<<rdo0->GetVal()<<std::endl;
 	  //	  f11t_mpv = rdo->GetVal()*10;
 	  //	  std::cout<<"EFN:68(F11 MPV), "<<(ts0<<32)+ts1<<std::endl;
-	  f11t_mpv = ((ts0<<32)+ts1)*10;
+	  f11t_mpv = ((ts1<<32)+ts0)*10;
 	}
 
 	else if (j==13 && rso->GetDevice()==1 && rso->GetFP()==11 && rso->GetDetector()==60 && rso->GetModule()==62){
@@ -209,14 +209,14 @@ int main(int argc, char **argv)
 	  //   TArtRawDataObject* rdo = rso->GetData(k);
 	  //   std::cout<<"EFN:81(WR), "<<j<<" "<<k<<"/"<<rso->GetNumData()<<" "<<rdo->GetGeo()<<" "<<rdo->GetCh()<<" "<<rdo->GetVal()<<" "<<rdo->GetEdge()<<std::endl;
 	  // }
-	  TArtRawDataObject* rdo0 = rso->GetData(1);
-	  TArtRawDataObject* rdo1 = rso->GetData(0);
+	  TArtRawDataObject* rdo0 = rso->GetData(0);
+	  TArtRawDataObject* rdo1 = rso->GetData(1);
 	  ULong64_t ts0 = rdo0->GetVal();
 	  ULong64_t ts1 = rdo1->GetVal();
 	  //	std::cout<<"EFN:81(WR Vetar), "<<rdo->GetVal()<<std::endl;
 	  //	  t_vetar = rdo->GetVal()*8;
 	  //	  std::cout<<"EFN:81(WR Vetar), "<<(ts0<<32)+ts1<<std::endl;
-	  t_vetar = ((ts0<<32)+ts1)*8;
+	  t_vetar = ((ts1<<32)+ts0)*8;
 
 	}
 	else if (j==14 && rso->GetDevice()==0 && rso->GetFP()==3 && rso->GetDetector()==60 && rso->GetModule()==8){
@@ -232,14 +232,14 @@ int main(int argc, char **argv)
 	  //	std::cout<<"EFN:81(TSB MPV), "<<rdo->GetVal()<<std::endl;
 	  //	  tsb_mpv = rdo->GetVal()*10;
 	  //	  std::cout<<"EFN:81(TSB MPV), "<<(ts0<<32)+ts1<<std::endl;
-	  tsb_mpv = ((ts0<<32)+ts1)*10;
+	  tsb_mpv = ((ts1<<32)+ts0)*10;
 	}
       }
     
 
 
 
-      if (neve % 1000 == 0)
+      if ((neve&0x3ff) == 0)
 	std::cout << "event: " << neve << std::endl;
 
       //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

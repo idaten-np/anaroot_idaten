@@ -35,7 +35,7 @@ install(TARGETS ${exec_name}
 )
 endfunction()
 
-#addExec(MakeFullBigRIPSTree)
+addExec(MakeFullBigRIPSTree)
 addExec(MakePIDTree)
 #addExec(Monitor)
 

@@ -18,9 +18,17 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install CACHE PATH "install dir" FO
 
 add_subdirectory(src)
 
+file (WRITE ${PROJECT_BINARY_DIR}/setup_BRSvme.sh
+"BRSvme_SYS=" ${CMAKE_INSTALL_PREFIX} "\n"
+"source " ${ANAROOT_DIR}"/scripts/setup.sh\n"
+"export LD_LIBRARY_PATH=${BRSvme_SYS}/lib:${LD_LIBRARY_PATH}\n"
+"export PATH=${BRSvme_SYS}/bin:${PATH}\n"
+"export ROOT_INCLUDE_PATH=${BRSvme_SYS}/include:${ROOT_INCLUDE_PATH}\n"
+)
+
 install(FILES
 	afterproc_LJ.sh
-	setup_BRSvme.sh
+	${PROJECT_BINARY_DIR}/setup_BRSvme.sh
 	DESTINATION .)
 
 install(DIRECTORY db matrix DESTINATION .)

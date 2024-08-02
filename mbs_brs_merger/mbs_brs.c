@@ -38,9 +38,9 @@ void mbs_brs()
 
 	TChain *ch_mbs = new TChain("AnalysisxTree");
 	TChain *ch_brs = new TChain("tree");
-	ret = ch_mbs->Add(Form("/home/idatendaq/idaten24/rootfiles/mbsrootfiles_unpack/Run49_0009_highrate_brsaccpt_0*.root"));
+	ret = ch_mbs->Add(Form("/home/gamma/IDATEN/2024_spring/ROOT/mbs/Run49_0009_highrate_brsaccpt_0*.root"));
 	if (ret==0) return;
-	ret = ch_brs->Add(Form("/raid/r0901/idaten24/rootfiles/analysis_high_LJ/ROOT/vme_mbs49_brsaccpt/idaten00*.root"));
+	ret = ch_brs->Add(Form("/home/gamma/IDATEN/2024_spring/ROOT/vme/Run49_0009_highrate_brsaccpt/idaten00*.root"));
 	if (ret==0) return;
 	ch_mbs->GetListOfFiles()->Print();
 	std::cout << "clr to continue" << std::endl;
